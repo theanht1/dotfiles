@@ -1,0 +1,1 @@
+/home/mta/.zprezto/runcoms/zlogin
