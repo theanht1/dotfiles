@@ -47,7 +47,7 @@
 set history=500
 
 " Show line number
-"set number
+set number
 
 " Enable filetype plugins
 filetype plugin on
