@@ -2,9 +2,12 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
+# Default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
-source ".profile"
+# Load local environmental variables
+source /home/mta/.profile
 # [[ $- != *i* ]] && return
 
 # alias for git
@@ -12,12 +15,24 @@ gits() {
   git status
 }
 
-gitck() {
-  git checkout
+gpush() {
+  git push origin $1
 }
 
-gitcm() {
-  git commit -am
+gpull() {
+  git pull origin $1
+}
+
+gitck() {
+  git checkout $1
+}
+
+gitc() {
+  git commit -m $1
+}
+
+gitca() {
+  git commit -am $1
 }
 
 # some common commands
@@ -31,6 +46,10 @@ wifi-bayo() {
 
 wifi-home() {
   sudo netctl start wlp3s0-TuanVu0408
+}
+
+wifi-lenovo() {
+  sudo netctl start wlp3s0-Lenovo\ P70-A
 }
 
 ethernet() {
