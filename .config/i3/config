@@ -193,10 +193,16 @@ bar {
 bindsym $mod+l exec --no-startup-id i3lock -f -t -i ~/Downloads/Wallpaper/your-lie-in-april_3.png 
 
 # Volumn keyboard config
+bindsym $mod+F8 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym $mod+m exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym $mod+b exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
 bindsym $mod+n exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
 
+# Screen backlight
+bindsym $mod+F9 exec light -U 5
+bindsym $mod+F10 exec light -A 5
+
+# File manager
 bindsym $mod+t exec thunar
 
 # Touchpad tap to click

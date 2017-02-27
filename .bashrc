@@ -10,6 +10,10 @@ export EDITOR="$VISUAL"
 source /home/mta/.profile
 # [[ $- != *i* ]] && return
 
+alias subl=subl3
+alias xclip="xclip -selection c"
+
+
 # alias for git
 gits() {
   git status
@@ -35,6 +39,9 @@ gitca() {
   git commit -am $1
 }
 
+gfet() {
+  git fetch origin $1
+}
 # some common commands
 suspend() {
   systemctl suspend
@@ -61,3 +68,5 @@ ethernet() {
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
  
 PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH=/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/home/mta/.rvm/gems/ruby-2.3.0/bin:/home/mta/.rvm/gems/ruby-2.3.0@global/bin:/home/mta/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/mta/.rvm/bin:/home/mta/.rvm/bin:/home/mta/.rvm/bin:/home/mta/.rvm/bin:/home/mta/.rvm/bin:/home/mta/.vimpkg/bin
