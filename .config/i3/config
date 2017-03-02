@@ -100,6 +100,7 @@ set $ws2 2:
 set $ws3 3:
 set $ws4 4:
 set $ws5 5:
+set $ws6 6:
 set $ws10 10:
 
 # switch to workspace
@@ -108,7 +109,7 @@ bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
 bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace 6
+bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
@@ -120,7 +121,7 @@ bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
@@ -159,6 +160,23 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Shutdown, Reboot, Lock Screen, and Logout
+#
+set $power_mode "power"
+bindsym $mod+Shift+u      mode $power_mode
+mode $power_mode {
+  bindsym p        exec shutdown now
+  bindsym r        exec systemctl reboot
+  bindsym l        exec i3lock -i ~/Pictures/cube.png , mode "default"
+  bindsym q        exec --no-startup-id i3-msg exit, mode "default"
+  bindsym h        exec systemctl hibernate
+  bindsym s        exec systemctl suspend
+
+  bindsym Return   mode "default"
+  bindsym Escape   mode "default"
+}
+
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -187,23 +205,29 @@ bar {
 }
 
 # Take screenshoot
-# bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
+bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
+
+# Sleep
+bindsym XF86Sleep exec systemctl suspend
 
 # Lock screen
 bindsym $mod+l exec --no-startup-id i3lock -f -t -i ~/Downloads/Wallpaper/your-lie-in-april_3.png 
 
 # Volumn keyboard config
-bindsym $mod+F8 exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym $mod+m exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
-bindsym $mod+b exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -5%
-bindsym $mod+n exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -3%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo +3%
 
 # Screen backlight
-bindsym $mod+F9 exec light -U 5
-bindsym $mod+F10 exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 5
 
-# File manager
-bindsym $mod+t exec thunar
+# Music
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioStop exec mpc stop
 
 # Touchpad tap to click
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 2, 3, 0, 0, 1, 3,
