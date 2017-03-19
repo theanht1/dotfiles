@@ -1,0 +1,7 @@
+filetype *.pdf google-chrome-stable %c
+filetype *.doc libreoffice
+filetype *.docx libreoffice
+filetype *.xls libreoffice
+filetype *.xlsx libreoffice
+filetype *.png feh
+filetype *.jpg feh

@@ -14,8 +14,8 @@ set number
 " show command in NORMAL mode
 set showcmd
 
-" 4 soft tabs
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+" 2 soft tabs
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " indent helpers
 filetype indent on

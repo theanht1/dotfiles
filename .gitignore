@@ -115,3 +115,9 @@ semantic.min.css
 .viminfo
 .zshrc
 .i3
+*.png
+*.jpg
+mpdsetup.sh
+.lyrics
+.vifm
+.ncmpcpp
