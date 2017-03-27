@@ -1,0 +1,23 @@
+[user]
+	email = theanht1k20@gmail.com
+	name = Anh Mai
+[color]
+  ui = true
+[alias]
+  st = status
+  a = add
+  ca = commit -am
+  c = commit -m
+  ck = checkout
+  ckb = checkout -b
+  pl = pull origin
+  ps = push origin
+  f = fetch origin
+  b = branch
+  bl = branch -l
+  bla = branch -la
+  bd = branch -D
+  mg = merge
+  lc = log ORIG_HEAD.. --stat --no-merges
+  llog = log --date=local
+
