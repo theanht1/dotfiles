@@ -10,7 +10,6 @@ export EDITOR="$VISUAL"
 source /home/mta/.profile
 # [[ $- != *i* ]] && return
 
-alias subl=sublime_text_3_imfix
 alias xclip="xclip -selection c"
 
 
@@ -29,7 +28,7 @@ wifi-bayo() {
 }
 
 wifi-home() {
-  sudo netctl start wlp3s0-TuanVu0408
+  sudo netctl start wlp3s0-Tuan\ Vu
 }
 
 wifi-lenovo() {
@@ -52,6 +51,9 @@ stop-wifi-hust() {
   sudo netctl stop wlp3s0-WIFI-HUST
 }
 
+stop-wifi-bayo() {
+  sudo netctl stop wlp3s0-Bayo
+}
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -65,5 +67,9 @@ export JAVA_HOME=${JAVA_HOME:-/opt/java}
 export LD_LIBRARY_PATH=/usr/include/igraph
 #export LD_PRELOAD=/home/user/libs/igraph/libigraph.so
 
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export CLASSPATH=$JAVA_HOME/lib/sa-jdi.jar
+
+export PATH=$PATH:/home/mta/IDES/Gogland-171.4694.35/bin
 # Fzf for zsh
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
