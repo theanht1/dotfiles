@@ -253,6 +253,9 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
+headphone-mixer = Headphone
+headphone-id = 19
+
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}

@@ -20,4 +20,5 @@
   mg = merge
   lc = log ORIG_HEAD.. --stat --no-merges
   llog = log --date=local
+  d = diff
 
