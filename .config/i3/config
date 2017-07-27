@@ -254,8 +254,11 @@ exec --no-startup-id xss-lock -- i3lock -n -i ~/Downloads/Wallpaper/your-lie-in-
 exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id telegram
 
+## Assign apps to ws
 assign [class="IntelliJ"] $ws3
 assign [class="Google"] $ws3
 assign [class="Steam"] $ws3
 assign [class="Stardew"] $ws3
 assign [class="Telegram"] $ws4
+
+exec /home/mta/.config/i3/mem_alert.sh &
