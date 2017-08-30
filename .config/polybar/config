@@ -51,7 +51,7 @@ font-2 = FontAwesome:pixelsize=12;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = cool-text wlan eth memory cpu battery temperature volume date
+modules-right = cool-text wlan eth memory cpu load battery temperature volume date
 
 tray-position = right
 tray-padding = 2
@@ -129,8 +129,8 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-background = #cd63e8
+label-focused-underline = ${colors.positive}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
@@ -325,6 +325,9 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/text
 content = Life sucks
 
+click-left = echo 'Right click'
+click-right = echo 'Life sucks'
+
 [module/powermenu]
 type = custom/menu
 
@@ -351,6 +354,11 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/load]
+type = custom/script
+
+exec = uptime | grep -o ': [0-9]\.[0-9]*' | sed -e 's\[^0-9.]\\g'
 
 [settings]
 screenchange-reload = true

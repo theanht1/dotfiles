@@ -1,0 +1,55 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  focus = system
+  homogeneous_tabbar = False
+  inactive_color_offset = 1.0
+  scroll_tabbar = True
+  tab_position = bottom
+  title_font = Sans 12
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#041fa0"
+  title_use_system_font = False
+  window_state = hidden
+[keybindings]
+  help = <Primary>F1
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#839496"
+    cursor_shape = ibeam
+    font = Monospace 11
+    foreground_color = "#839496"
+    icon_bell = False
+    scrollback_infinite = True
+    scrollback_lines = 1000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[solarized-dark]]
+    background_color = "#eee8d5"
+    cursor_color = "#002b36"
+    cursor_shape = ibeam
+    font = Monospace 11
+    foreground_color = "#002b36"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    use_system_font = False
+  [[solarized-light]]
+    cursor_color = "#aaaaaa"
+    cursor_shape = ibeam
+    scrollback_infinite = True

@@ -28,7 +28,7 @@ wifi-bayo() {
 }
 
 wifi-home() {
-  sudo netctl start wlp3s0-Tuan\ Vu
+  sudo netctl start wlp3s0-Huster
 }
 
 wifi-lenovo() {
