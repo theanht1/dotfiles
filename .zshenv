@@ -1,1 +1,1 @@
-/home/mta/.zprezto/runcoms/zshenv
+/home/anhmt/.zprezto/runcoms/zshenv
