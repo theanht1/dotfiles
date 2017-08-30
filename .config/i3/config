@@ -261,4 +261,7 @@ assign [class="Steam"] $ws3
 assign [class="Stardew"] $ws3
 assign [class="Telegram"] $ws4
 
-exec /home/mta/.config/i3/mem_alert.sh &
+#exec /home/mta/.config/i3/mem_alert.sh &
+#exec /home/mta/.config/i3/power_suspend.sh &
+
+#exec mpd /home/mta/.config/mpd/mpd.conf

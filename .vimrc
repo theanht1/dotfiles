@@ -25,6 +25,7 @@ set smarttab
 set nobackup
 set noswapfile
 
+set belloff=all
 
 """"
 "THEME

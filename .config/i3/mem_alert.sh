@@ -13,6 +13,6 @@ function check_mem() {
 
 check_mem
 while true; do
-  sleep 2
+  sleep 10
   check_mem
 done
