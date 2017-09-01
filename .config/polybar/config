@@ -22,7 +22,7 @@ negative = #e83306
 warn = #fcdf23
 
 [bar/mta]
-monitor = ${env:MONITOR:LVDS-1}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 25
 ;offset-x = 1%
@@ -51,7 +51,7 @@ font-2 = FontAwesome:pixelsize=12;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = cool-text wlan eth memory cpu load battery temperature volume date
+modules-right = cool-text wlan eth memory cpu load battery0 battery temperature volume date
 
 tray-position = right
 tray-padding = 2
@@ -61,7 +61,7 @@ tray-padding = 2
 
 #override-redirect = true
 
-wm-restack = i3
+#wm-restack = i3
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
@@ -220,8 +220,8 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp2s0f0
-interval = 3.0
+interface = enp0s25
+interval = 60
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
@@ -253,8 +253,14 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-headphone-mixer = Headphone
-headphone-id = 19
+;master-soundcard = default
+;speaker-soundcard = default
+;headphone-soundcard = default
+
+;master-mixer = IEC958
+
+;headphone-mixer = Headphone
+;headphone-id = 1
 
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
@@ -274,7 +280,7 @@ ramp-headphones-1 = 
 [module/battery]
 type = internal/battery
 battery = BAT1
-adapter = ACAD
+adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
@@ -301,6 +307,10 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
+
+[module/battery0]
+inherit = module/battery
+battery = BAT0
 
 [module/temperature]
 type = internal/temperature

@@ -4,7 +4,7 @@
 [color]
   ui = true
 [alias]
-  st = status
+  s = status
   a = add
   ca = commit -am
   c = commit -m

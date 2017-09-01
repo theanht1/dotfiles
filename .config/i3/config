@@ -220,6 +220,7 @@ bindsym XF86Sleep exec systemctl suspend
 bindsym $mod+l exec --no-startup-id i3lock -f -t -i ~/Downloads/Wallpaper/your-lie-in-april_3.png
 
 # Volumn keyboard config
+bindsym XF86AudioMicMute exec pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo toggle
 bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym $mod+m exec pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -3%
@@ -230,13 +231,13 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 
 # Music
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioStop exec mpc stop
+#bindsym XF86AudioPlay exec mpc toggle
+#bindsym XF86AudioNext exec mpc next
+#bindsym XF86AudioPrev exec mpc prev
+#bindsym XF86AudioStop exec mpc stop
 
 # Touchpad tap to click
-exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "Synaptics TM3053-004" "libinput Tapping Enabled" 1
 
 # Disable mouse middle button
 #exec --no-startup-id xinput set-button-map 11 1 0 3
@@ -264,4 +265,4 @@ assign [class="Telegram"] $ws4
 #exec /home/mta/.config/i3/mem_alert.sh &
 #exec /home/mta/.config/i3/power_suspend.sh &
 
-#exec mpd /home/mta/.config/mpd/mpd.conf
+exec mpd /home/mta/.config/mpd/mpd.conf

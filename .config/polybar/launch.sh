@@ -12,6 +12,6 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 if xrandr --listmonitors | grep VGA ; then
   MONITOR=VGA-1 polybar mta &
 fi
-MONITOR=LVDS-1 polybar mta &
+MONITOR=eDP1 polybar mta &
 
 echo "Bars launched...

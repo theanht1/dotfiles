@@ -31,7 +31,7 @@
     background_color = "#002b36"
     cursor_color = "#839496"
     cursor_shape = ibeam
-    font = Monospace 11
+    font = Monospace 14
     foreground_color = "#839496"
     icon_bell = False
     scrollback_infinite = True
