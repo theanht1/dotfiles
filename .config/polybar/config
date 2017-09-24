@@ -281,7 +281,7 @@ ramp-headphones-1 = 
 type = internal/battery
 battery = BAT1
 adapter = AC
-full-at = 98
+full-at = 100
 
 format-charging = <animation-charging> <label-charging>
 ;format-charging-underline = #ffb52a

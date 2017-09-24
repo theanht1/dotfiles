@@ -245,10 +245,10 @@ exec --no-startup-id xinput set-prop "Synaptics TM3053-004" "libinput Tapping En
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set desktop background
-exec --no-startup-id feh --bg-fill ~/Downloads/Wallpaper/kimi_no_na_wa_3.jpg
+exec --no-startup-id feh --bg-fill ~/Downloads/Wallpaper/bare_tree_winter_night-wallpaper-1600x900.jpg
 
 # Lock screen before suspend
-exec --no-startup-id xss-lock -- i3lock -n -i ~/Downloads/Wallpaper/your-lie-in-april_3.png &
+exec --no-startup-id xss-lock -- i3lock -n -t -i ~/Downloads/Wallpaper/your-lie-in-april_3.png &
 
 # Start up app
 #exec --no-startup-id fcitx

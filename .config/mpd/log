@@ -1397,3 +1397,207 @@ Sep 01 22:37 : client: [11] closed
 Sep 01 22:37 : client: [12] opened from 127.0.0.1:42448
 Sep 01 22:46 : client: [12] closed
 Sep 01 22:47 : client: [13] opened from 127.0.0.1:42598
+Sep 02 22:31 : client: [13] closed
+Sep 02 22:31 : client: [14] opened from 127.0.0.1:33696
+Sep 02 22:31 : client: [14] closed
+Sep 02 22:31 : client: [15] opened from 127.0.0.1:33698
+Sep 02 23:03 : client: [15] closed
+Sep 02 23:03 : client: [16] opened from 127.0.0.1:34156
+Sep 02 23:03 : client: [16] closed
+Sep 02 23:03 : client: [17] opened from 127.0.0.1:34158
+Sep 02 23:27 : client: [17] closed
+Sep 02 23:27 : client: [18] opened from 127.0.0.1:34504
+Sep 03 09:32 : client: [0] opened from 127.0.0.1:51804
+Sep 03 09:59 : client: [0] closed
+Sep 03 09:59 : client: [1] opened from 127.0.0.1:52146
+Sep 03 16:17 : client: [2] opened from 127.0.0.1:60500
+Sep 03 16:17 : client: [2] closed
+Sep 03 16:17 : client: [3] opened from 127.0.0.1:60502
+Sep 03 16:17 : player: played "La Lung - Thai Vu.mp3"
+Sep 03 16:17 : client: [3] closed
+Sep 04 17:04 : client: [0] opened from 127.0.0.1:57734
+Sep 04 18:05 : client: [0] closed
+Sep 04 18:05 : client: [1] opened from 127.0.0.1:58924
+Sep 04 18:05 : client: [1] closed
+Sep 04 18:05 : client: [2] opened from 127.0.0.1:58926
+Sep 04 18:05 : client: [2] closed
+Sep 04 18:05 : client: [3] opened from 127.0.0.1:58928
+Sep 04 18:05 : client: [3] closed
+Sep 04 18:05 : client: [4] opened from 127.0.0.1:58930
+Sep 04 18:05 : client: [4] closed
+Sep 04 18:05 : client: [5] opened from 127.0.0.1:58932
+Sep 04 18:05 : client: [5] closed
+Sep 04 18:05 : client: [6] opened from 127.0.0.1:58934
+Sep 04 18:05 : client: [6] closed
+Sep 04 18:05 : client: [7] opened from 127.0.0.1:58936
+Sep 04 18:06 : client: [7] closed
+Sep 04 18:06 : client: [8] opened from 127.0.0.1:58946
+Sep 04 22:54 : client: [8] closed
+Sep 04 22:54 : client: [9] opened from 127.0.0.1:33038
+Sep 04 23:08 : client: [9] closed
+Sep 04 23:08 : client: [10] opened from 127.0.0.1:33360
+Sep 04 23:08 : client: [10] closed
+Sep 04 23:08 : client: [11] opened from 127.0.0.1:33366
+Sep 04 23:08 : client: [11] closed
+Sep 04 23:08 : client: [12] opened from 127.0.0.1:33368
+Sep 05 00:32 : client: [12] closed
+Sep 05 00:32 : client: [13] opened from 127.0.0.1:34446
+Sep 05 01:19 : client: [13] closed
+Sep 05 01:19 : client: [14] opened from 127.0.0.1:34866
+Sep 05 14:37 : client: [14] closed
+Sep 05 14:37 : client: [15] opened from 127.0.0.1:34914
+Sep 05 14:37 : client: [15] closed
+Sep 05 14:37 : client: [16] opened from 127.0.0.1:34916
+Sep 05 14:37 : client: [16] closed
+Sep 05 14:37 : client: [17] opened from 127.0.0.1:34928
+Sep 05 14:52 : client: [17] closed
+Sep 05 14:52 : client: [18] opened from 127.0.0.1:35422
+Sep 05 18:26 : client: [18] closed
+Sep 05 18:26 : client: [19] opened from 127.0.0.1:55506
+Sep 05 18:26 : client: [19] closed
+Sep 05 18:26 : client: [20] opened from 127.0.0.1:55508
+Sep 05 18:26 : client: [20] closed
+Sep 05 18:26 : client: [21] opened from 127.0.0.1:55510
+Sep 05 19:22 : client: [21] closed
+Sep 05 19:22 : client: [22] opened from 127.0.0.1:55698
+Sep 05 19:40 : client: [22] closed
+Sep 05 19:40 : client: [23] opened from 127.0.0.1:55736
+Sep 05 19:40 : client: [23] closed
+Sep 05 19:40 : client: [24] opened from 127.0.0.1:55738
+Sep 05 19:40 : client: [24] closed
+Sep 05 19:40 : client: [25] opened from 127.0.0.1:55740
+Sep 05 19:59 : client: [25] closed
+Sep 05 19:59 : client: [26] opened from 127.0.0.1:55908
+Sep 06 09:24 : client: [26] closed
+Sep 06 09:24 : client: [27] opened from 127.0.0.1:55956
+Sep 06 09:25 : client: [27] closed
+Sep 06 09:25 : client: [28] opened from 127.0.0.1:56046
+Sep 06 14:05 : client: [28] closed
+Sep 06 14:05 : client: [29] opened from 127.0.0.1:58388
+Sep 06 14:22 : client: [29] closed
+Sep 06 14:22 : client: [30] opened from 127.0.0.1:58476
+Sep 06 14:22 : client: [30] closed
+Sep 06 14:22 : client: [31] opened from 127.0.0.1:58478
+Sep 06 14:22 : client: [31] closed
+Sep 06 14:22 : client: [32] opened from 127.0.0.1:58480
+Sep 06 14:22 : client: [32] closed
+Sep 06 14:22 : client: [33] opened from 127.0.0.1:58526
+Sep 06 19:24 : client: [33] closed
+Sep 06 19:24 : client: [34] opened from 127.0.0.1:34574
+Sep 06 22:38 : client: [34] closed
+Sep 06 22:38 : avahi: Client Disconnected, will reconnect shortly
+Sep 06 22:38 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Sep 06 22:39 : client: [0] opened from 127.0.0.1:42562
+Sep 07 09:51 : client: [0] closed
+Sep 07 09:51 : client: [1] opened from 127.0.0.1:38174
+Sep 07 11:10 : client: [0] opened from 127.0.0.1:49986
+Sep 07 14:33 : client: [0] closed
+Sep 07 14:33 : client: [1] opened from 127.0.0.1:50546
+Sep 07 17:55 : client: [1] closed
+Sep 07 17:55 : client: [2] opened from 127.0.0.1:51474
+Sep 07 17:55 : client: [2] closed
+Sep 07 17:55 : client: [3] opened from 127.0.0.1:51500
+Sep 08 10:06 : client: [3] closed
+Sep 08 10:06 : client: [4] opened from 127.0.0.1:32952
+Sep 08 12:53 : client: [4] closed
+Sep 08 12:53 : client: [5] opened from 127.0.0.1:39864
+Sep 08 15:31 : client: [5] closed
+Sep 08 15:31 : client: [6] opened from 127.0.0.1:33788
+Sep 09 08:10 : client: [0] opened from 127.0.0.1:59180
+Sep 09 08:13 : client: [0] closed
+Sep 09 08:13 : client: [1] opened from 127.0.0.1:59372
+Sep 10 17:58 : client: [1] closed
+Sep 10 17:58 : client: [2] opened from 127.0.0.1:34346
+Sep 11 19:15 : client: [0] opened from 127.0.0.1:46728
+Sep 11 19:15 : client: [1] opened from [::1]:36530
+Sep 11 19:15 : client: [1] closed
+Sep 12 09:10 : client: [0] opened from 127.0.0.1:47576
+Sep 13 12:55 : client: [0] opened from 127.0.0.1:59830
+Sep 14 10:53 : client: [0] opened from 127.0.0.1:38146
+Sep 16 08:03 : client: [0] opened from 127.0.0.1:38090
+Sep 16 09:19 : client: [0] closed
+Sep 16 09:19 : client: [1] opened from 127.0.0.1:33366
+Sep 16 09:20 : client: [1] closed
+Sep 16 09:20 : client: [2] opened from 127.0.0.1:34140
+Sep 16 10:20 : client: [2] closed
+Sep 16 10:20 : client: [3] opened from 127.0.0.1:33870
+Sep 16 10:20 : client: [3] closed
+Sep 16 10:20 : client: [4] opened from 127.0.0.1:34330
+Sep 16 10:53 : client: [4] closed
+Sep 16 10:53 : client: [5] opened from 127.0.0.1:56484
+Sep 18 09:35 : client: [0] opened from 127.0.0.1:58206
+Sep 18 11:51 : client: [0] closed
+Sep 18 11:51 : client: [1] opened from 127.0.0.1:52228
+Sep 18 15:03 : client: [1] closed
+Sep 18 15:03 : client: [2] opened from 127.0.0.1:41382
+Sep 18 15:03 : client: [2] closed
+Sep 18 15:04 : client: [3] opened from 127.0.0.1:41728
+Sep 18 15:04 : client: [3] closed
+Sep 18 15:04 : client: [4] opened from 127.0.0.1:41826
+Sep 18 15:34 : client: [4] closed
+Sep 18 15:34 : client: [5] opened from 127.0.0.1:37884
+Sep 18 15:34 : client: [5] closed
+Sep 18 15:34 : client: [6] opened from 127.0.0.1:38246
+Sep 18 16:13 : client: [6] closed
+Sep 18 16:13 : client: [7] opened from 127.0.0.1:54704
+Sep 19 16:41 : client: [0] opened from 127.0.0.1:38610
+Sep 20 08:47 : client: [0] opened from 127.0.0.1:58750
+Sep 20 12:38 : client: [0] opened from 127.0.0.1:60916
+Sep 20 13:23 : client: [0] closed
+Sep 20 13:23 : client: [1] opened from 127.0.0.1:56398
+Sep 20 13:24 : client: [1] closed
+Sep 20 13:25 : client: [2] opened from 127.0.0.1:59178
+Sep 20 13:28 : client: [2] closed
+Sep 20 13:28 : client: [3] opened from 127.0.0.1:38230
+Sep 20 13:47 : client: [3] closed
+Sep 20 13:47 : client: [4] opened from 127.0.0.1:45214
+Sep 20 13:47 : client: [4] closed
+Sep 20 13:47 : client: [5] opened from 127.0.0.1:45344
+Sep 20 13:47 : client: [5] closed
+Sep 20 13:47 : client: [6] opened from 127.0.0.1:45442
+Sep 20 13:47 : client: [6] closed
+Sep 20 13:47 : client: [7] opened from 127.0.0.1:45732
+Sep 20 14:40 : client: [8] opened from 127.0.0.1:35340
+Sep 20 14:40 : client: [8] closed
+Sep 20 14:40 : client: [9] opened from 127.0.0.1:35406
+Sep 20 14:40 : client: [9] closed
+Sep 20 14:40 : client: [10] opened from 127.0.0.1:35416
+Sep 20 14:40 : player: played "La Lung - Thai Vu.mp3"
+Sep 20 14:40 : client: [10] closed
+Sep 20 16:01 : client: [7] closed
+Sep 20 16:01 : client: [11] opened from 127.0.0.1:51292
+Sep 21 08:13 : client: [0] opened from 127.0.0.1:37874
+Sep 21 14:22 : client: [0] closed
+Sep 21 14:22 : client: [1] opened from 127.0.0.1:37740
+Sep 21 18:49 : client: [1] closed
+Sep 21 18:49 : client: [2] opened from 127.0.0.1:45516
+Sep 21 18:49 : client: [2] closed
+Sep 21 18:49 : client: [3] opened from 127.0.0.1:45542
+Sep 22 13:25 : client: [0] opened from 127.0.0.1:51236
+Sep 22 21:54 : client: [0] closed
+Sep 22 21:54 : client: [1] opened from 127.0.0.1:55580
+Sep 23 20:01 : client: [0] opened from 127.0.0.1:33694
+Sep 23 20:12 : client: [0] closed
+Sep 23 20:12 : client: [1] opened from 127.0.0.1:34154
+Sep 23 20:12 : client: [1] closed
+Sep 23 20:12 : client: [2] opened from 127.0.0.1:34156
+Sep 23 20:12 : client: [2] closed
+Sep 23 20:12 : client: [3] opened from 127.0.0.1:34158
+Sep 23 20:12 : client: [3] closed
+Sep 23 20:12 : client: [4] opened from 127.0.0.1:34160
+Sep 23 20:12 : client: [5] opened from 127.0.0.1:34162
+Sep 23 20:12 : client: [5] closed
+Sep 23 20:12 : client: [4] closed
+Sep 23 20:12 : client: [6] opened from 127.0.0.1:34166
+Sep 23 20:14 : client: [6] closed
+Sep 23 20:14 : client: [7] opened from 127.0.0.1:34168
+Sep 23 20:14 : client: [7] closed
+Sep 23 20:14 : client: [8] opened from 127.0.0.1:34170
+Sep 23 20:14 : client: [8] closed
+Sep 23 20:14 : client: [9] opened from 127.0.0.1:34172
+Sep 24 09:22 : client: [9] closed
+Sep 24 09:22 : client: [10] opened from 127.0.0.1:58412
+Sep 24 11:02 : client: [10] closed
+Sep 24 11:02 : client: [11] opened from 127.0.0.1:32964
+Sep 24 11:08 : client: [11] closed
+Sep 24 11:08 : client: [12] opened from 127.0.0.1:33262

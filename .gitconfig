@@ -1,6 +1,9 @@
 [user]
-	email = theanht1k20@gmail.com
-	name = Anh Mai
+  email = theanht1k20@gmail.com
+  name = Anh Mai
+
+  #email = dungpt3003@gmail.com
+  #name = Dung Pham
 [color]
   ui = true
 [alias]
