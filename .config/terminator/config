@@ -31,7 +31,7 @@
     background_color = "#002b36"
     cursor_color = "#839496"
     cursor_shape = ibeam
-    font = Monospace 14
+    font = Monospace 13
     foreground_color = "#839496"
     icon_bell = False
     scrollback_infinite = True
@@ -40,6 +40,8 @@
     show_titlebar = False
     use_system_font = False
   [[solarized-dark]]
+    cursor_color = "#aaaaaa"
+  [[solarized-light]]
     background_color = "#eee8d5"
     cursor_color = "#002b36"
     cursor_shape = ibeam
@@ -49,7 +51,3 @@
     scrollback_infinite = True
     scrollbar_position = hidden
     use_system_font = False
-  [[solarized-light]]
-    cursor_color = "#aaaaaa"
-    cursor_shape = ibeam
-    scrollback_infinite = True

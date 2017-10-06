@@ -43,7 +43,10 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # j4 dmenu, which is claimed 25 times faster than i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop
+
+# Ulaucher
+#bindsym $mod+d exec --no-startup-id ulauncher
 
 # change focus
 bindsym $mod+j focus left
