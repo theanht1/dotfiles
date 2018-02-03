@@ -14,4 +14,5 @@ if xrandr --listmonitors | grep VGA ; then
 fi
 MONITOR=eDP1 polybar mta &
 
-echo "Bars launched...
+echo "Bars launched..."
+

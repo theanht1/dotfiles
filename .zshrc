@@ -48,3 +48,5 @@ export PATH=$PATH:/home/mta/.nvm/versions/node/v8.4.0/bin
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export PATH=$PATH:$HOME/IDEs/clion-2017.2.3/bin

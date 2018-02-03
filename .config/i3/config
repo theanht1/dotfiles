@@ -220,7 +220,7 @@ bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/scre
 bindsym XF86Sleep exec systemctl suspend
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id i3lock -f -t -i ~/Downloads/Wallpaper/your-lie-in-april_3.png
+bindsym $mod+Control+l exec --no-startup-id lock
 
 # Volumn keyboard config
 bindsym XF86AudioMicMute exec pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo toggle
@@ -233,6 +233,7 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_
 bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 
+bindsym XF86Explorer exec --no-startup-id pcmanfm
 # Music
 #bindsym XF86AudioPlay exec mpc toggle
 #bindsym XF86AudioNext exec mpc next
@@ -248,10 +249,10 @@ exec --no-startup-id xinput set-prop "Synaptics TM3053-004" "libinput Tapping En
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set desktop background
-exec --no-startup-id feh --bg-fill ~/Downloads/Wallpaper/bare_tree_winter_night-wallpaper-1600x900.jpg
+exec --no-startup-id feh --bg-fill ~/Downloads/Wallpaper/san-gatsu.jpg
 
 # Lock screen before suspend
-exec --no-startup-id xss-lock -- i3lock -n -t -i ~/Downloads/Wallpaper/your-lie-in-april_3.png &
+exec --no-startup-id xss-lock -- lock &
 
 # Start up app
 #exec --no-startup-id fcitx
@@ -268,4 +269,4 @@ assign [class="Telegram"] $ws4
 #exec /home/mta/.config/i3/mem_alert.sh &
 #exec /home/mta/.config/i3/power_suspend.sh &
 
-exec mpd /home/mta/.config/mpd/mpd.conf
+#exec mpd /home/mta/.config/mpd/mpd.conf

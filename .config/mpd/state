@@ -1,7 +1,7 @@
 sw_volume: 98
 audio_device_state:1:PulseAudio Sound Server
 state: stop
-current: 0
+current: 14
 random: 0
 repeat: 1
 single: 0
