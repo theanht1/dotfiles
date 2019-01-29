@@ -1,17 +1,32 @@
-"" Pathogen
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-
 """
 " Vim Plug
 """
 
 call plug#begin()
 
-" vim-allomancer
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'Nequo/vim-allomancer'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'ryanoasis/vim-devicons'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'airblade/vim-gitgutter'
+Plug 'fatih/vim-go'
+Plug 'elixir-editors/vim-elixir'
+Plug 'digitaltoad/vim-pug'
+Plug 'tomlion/vim-solidity'
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -57,6 +72,9 @@ noremap <C-y> "*y
 """"
 "THEME
 """
+" syntax on
+" color dracula
+
 try
 source ~/.theme.vim
 catch
@@ -155,11 +173,16 @@ set guifont=Hack\ Nerd\ Font\ Regular\ 11
 
 """ Theme
 "set termguicolors
-"colo allomancer
+"color allomancer
 
 """ Vim Better Whitespace
 autocmd BufEnter * EnableStripWhitespaceOnSave
 
+
+""" Gitgutter
+highlight GitGutterAdd    guifg=#073642 ctermfg=2
+highlight GitGutterChange guifg=#073642 ctermfg=3
+highlight GitGutterDelete guifg=#073642 ctermfg=1
 
 """ Go
 let g:go_highlight_functions = 1
