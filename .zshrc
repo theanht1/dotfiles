@@ -1,0 +1,1 @@
+/Users/theanht1/.zprezto/runcoms/zshrc
