@@ -15,6 +15,7 @@ Plug 'fatih/vim-go'
 Plug 'elixir-editors/vim-elixir'
 Plug 'digitaltoad/vim-pug'
 Plug 'tomlion/vim-solidity'
+Plug 'posva/vim-vue'
 
 function! BuildYCM(info)
   " info is a dictionary with 3 fields
@@ -55,6 +56,10 @@ set belloff=all
 
 " Fix backspace
 set backspace=indent,eol,start
+
+" Search highlight
+set hlsearch
+set incsearch
 
 " Fold
 "set foldmethod=indent
