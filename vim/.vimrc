@@ -3,7 +3,6 @@
 """
 
 call plug#begin()
-
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Nequo/vim-allomancer'
@@ -16,6 +15,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'digitaltoad/vim-pug'
 Plug 'tomlion/vim-solidity'
 Plug 'posva/vim-vue'
+Plug 'isRuslan/vim-es6'
 
 function! BuildYCM(info)
   " info is a dictionary with 3 fields
@@ -79,6 +79,8 @@ noremap <C-y> "*y
 """
 " syntax on
 " color dracula
+
+augroup filetype javascript syntax=javascript
 
 try
 source ~/.theme.vim
