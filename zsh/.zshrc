@@ -11,33 +11,31 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias top=htop
+
+# Import config
+source ~/.bash_profile
+
+# Zsh autosuggrestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias top=htop
-#alias python=python3
-#alias pip=pip3
+# Default editor
+export EDITOR=/usr/bin/vim
 
+# Image config for xterm
+export TERM=xterm-256color
+
+# Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 export FZF_DEFAULT_COMMAND='rg --files'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+# Mysql
 export PATH=$PATH:/usr/local/mysql/bin
-export EDITOR=/usr/bin/vim
-export TERM=xterm-256color
 
-# Anaconda
-export PATH=$PATH:/anaconda3/bin
-#source ~/.bash_profile
+# Garmin SDK
+export PATH=$PATH:$HOME/.sdk/connectiq-sdk-mac-3.1.3-2019-09-10-ed887158b/bin
 
-# Google application credentials
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/theanht1/personal/credentials/google_cloud/STT demo-be0b20935225.json"
+export PATH="/usr/local/opt/swig@3/bin:$PATH"
+export GOPATH="$HOME/go"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/theanht1/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/theanht1/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/theanht1/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/theanht1/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

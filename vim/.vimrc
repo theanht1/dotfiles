@@ -3,8 +3,10 @@
 """
 
 call plug#begin()
+Plug 'ervandew/supertab'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'albfan/nerdtree-git-plugin'
 Plug 'Nequo/vim-allomancer'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
@@ -16,24 +18,20 @@ Plug 'digitaltoad/vim-pug'
 Plug 'tomlion/vim-solidity'
 Plug 'posva/vim-vue'
 Plug 'isRuslan/vim-es6'
-
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
-
-Plug 'Valloric/YouCompleteMe'
+" Plug 'zxqfl/tabnine-vim'
+Plug 'tpope/vim-obsession'
+Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 call plug#end()
 
 """""""""""""""""""""""
 """ Basic Configuration
 """""""""""""""""""""""
+
+let mapleader=","
 
 " show number
 set number
@@ -43,6 +41,9 @@ set showcmd
 
 " 2 soft tabs
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+
+" auto reload change from disk
+set autoread
 
 " indent helpers
 filetype indent on
@@ -61,6 +62,10 @@ set backspace=indent,eol,start
 set hlsearch
 set incsearch
 
+set ruler
+
+set scrolloff=1
+
 " Fold
 "set foldmethod=indent
 "set foldlevel=1
@@ -69,10 +74,32 @@ set incsearch
 " Tab
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
+tnoremap <C-h> <C-w>:tabprevious<CR>
 
 " Copy to clipboard
 noremap <C-y> "*y
 
+" Custom
+nnoremap <leader>ev :split $MYVIMRC<cr>
+
+" Common comment line of code
+autocmd FileType python,ruby nnoremap <buffer> <leader>/ I# <esc>
+autocmd FileType python,ruby vnoremap <buffer> <leader>/ I# <esc>
+autocmd FileType javascript,rust nnoremap <buffer> <leader>/ I// <esc>
+autocmd FileType javascript,rust vnoremap <buffer> <leader>/ I// <esc>
+autocmd FileType vim nnoremap <buffer> <leader>/ I" <esc>
+autocmd FileType vim vnoremap <buffer> <leader>/ I" <esc>
+
+" Omni complete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" View last session
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
+
+" Terminal
+tnoremap <Esc> <C-\><C-n>
 
 """"
 "THEME
@@ -113,13 +140,11 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+      \   'left': [ [ 'mode', 'paste' ], [ 'filename' ] ]
       \ },
       \ 'component_function': {
       \   'modified': 'LightlineModified',
       \   'readonly': 'LightlineReadonly',
-      \   'fugitive': 'LightlineFugitive',
-      \   'filename': 'LightlineFilename',
       \   'fileformat': 'LightlineFileformat',
       \   'filetype': 'LightlineFiletype',
       \   'fileencoding': 'LightlineFileencoding',
@@ -135,23 +160,6 @@ endfunction
 
 function! LightlineReadonly()
   return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '' : ''
-endfunction
-
-function! LightlineFilename()
-  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
-endfunction
-
-function! LightlineFugitive()
-  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-    let branch = fugitive#head()
-    return branch !=# '' ? ' '.branch : ''
-  endif
-  return ''
 endfunction
 
 function! LightlineFileformat()
@@ -199,6 +207,16 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+""" Markdown
+let g:mkdp_auto_close = 0
+let g:mkdp_refresh_slow = 1
+let g:mkdp_browser = "safari"
+" let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_level = 2
+let g:mkdp_echo_preview_url = 1
+let g:mkdp_port = 7373
+
 
 " fzf.vim bindings
 set rtp+=/usr/local/opt/fzf
