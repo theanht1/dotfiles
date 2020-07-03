@@ -17,17 +17,18 @@ Plug 'tomlion/vim-solidity'
 Plug 'posva/vim-vue'
 Plug 'isRuslan/vim-es6'
 
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
-
-Plug 'Valloric/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+" function! BuildYCM(info)
+"   " info is a dictionary with 3 fields
+"   " - name:   name of the plugin
+"   " - status: 'installed', 'updated', or 'unchanged'
+"   " - force:  set on PlugInstall! or PlugUpdate!
+"   if a:info.status == 'installed' || a:info.force
+"     !./install.py
+"   endif
+" endfunction
+"
+" Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -61,6 +62,9 @@ set backspace=indent,eol,start
 set hlsearch
 set incsearch
 
+" Mouse
+set mouse=a
+
 " Fold
 "set foldmethod=indent
 "set foldlevel=1
@@ -71,8 +75,13 @@ nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 
 " Copy to clipboard
-noremap <C-y> "*y
+noremap <C-y> :w !xclip -selection clipboard -i<CR>
 
+
+" Save last session position
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  endif
 
 """"
 "THEME
@@ -201,5 +210,5 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
 " fzf.vim bindings
-set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/bin/fzf
 map <C-P> :FZF<CR>
