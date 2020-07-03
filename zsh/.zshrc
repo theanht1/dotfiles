@@ -219,3 +219,6 @@ unset __conda_setup
 
 # Autojump
  [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+
+# ASDF
+. $HOME/.asdf/asdf.sh

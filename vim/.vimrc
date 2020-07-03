@@ -5,6 +5,7 @@
 call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'albfan/nerdtree-git-plugin'
 Plug 'Nequo/vim-allomancer'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ryanoasis/vim-devicons'
@@ -17,18 +18,12 @@ Plug 'tomlion/vim-solidity'
 Plug 'posva/vim-vue'
 Plug 'isRuslan/vim-es6'
 
-" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-" function! BuildYCM(info)
-"   " info is a dictionary with 3 fields
-"   " - name:   name of the plugin
-"   " - status: 'installed', 'updated', or 'unchanged'
-"   " - force:  set on PlugInstall! or PlugUpdate!
-"   if a:info.status == 'installed' || a:info.force
-"     !./install.py
-"   endif
-" endfunction
-"
-" Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-obsession'
+Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 
 call plug#end()
 
@@ -208,6 +203,15 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+""" Markdown
+let g:mkdp_auto_close = 0
+let g:mkdp_refresh_slow = 1
+let g:mkdp_browser = "safari"
+" let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_level = 2
+let g:mkdp_echo_preview_url = 1
+let g:mkdp_port = 7373
 
 " fzf.vim bindings
 set rtp+=/usr/bin/fzf
