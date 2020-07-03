@@ -1,0 +1,34 @@
+[user]
+  email = theanht1k20@gmail.com
+  name = Anh Mai
+
+[color]
+  ui = true
+[alias]
+  s = status
+  a = add
+  ca = commit -am
+  cas = commit -S -am
+  c = commit -m
+  cs = commit -S -m
+  ck = checkout
+  ckb = checkout -b
+  pl = pull origin
+  ps = push origin
+  f = fetch origin
+  b = branch
+  bl = branch -l
+  bla = branch -la
+  bd = branch -D
+  mg = merge
+  lc = log ORIG_HEAD.. --stat --no-merges
+  llog = log --date=local
+  d = diff
+  dw = diff --ignore-all-space
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
