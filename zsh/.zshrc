@@ -6,7 +6,7 @@ setopt rcexpandparam                                            # Array expensio
 # setopt nocheckjobs                                              # Don't warn about running processes when exiting
 setopt numericglobsort                                          # Sort filenames numerically when it makes sense
 setopt nobeep                                                   # No beep
-setopt appendhistory                                            # Immediately append history instead of overwriting
+setopt incappendhistory                                         # Immediately append history instead of overwriting
 setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
 
@@ -61,6 +61,9 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias top='htop'                                                # Htop
 alias pbcopy="xclip -selection clipboard -i"
+
+# Short function for open file
+function open() { xdg-open "$@" & }
 
 # Theming section
 autoload -U compinit colors zcalc
@@ -199,21 +202,6 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
 esac
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/theanht1/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/theanht1/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/theanht1/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/theanht1/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -222,3 +210,14 @@ unset __conda_setup
 
 # ASDF
 . $HOME/.asdf/asdf.sh
+
+# Pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+# GCloud
+export PROJECT_ID=$(gcloud config get-value project)
+
+# GO
+export GOROOT=$HOME/.asdf/installs/golang/1.16.5/go
