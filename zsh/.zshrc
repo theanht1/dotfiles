@@ -212,6 +212,9 @@ esac
 . $HOME/.asdf/asdf.sh
 
 # Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -221,3 +224,13 @@ export PROJECT_ID=$(gcloud config get-value project)
 
 # GO
 export GOROOT=$HOME/.asdf/installs/golang/1.16.5/go
+export GOPATH=$HOME/.asdf/installs/golang/1.16.5/packages
+export PATH=$PATH:$GOPATH/bin
+
+# Android
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
