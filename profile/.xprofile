@@ -1,0 +1,7 @@
+# Ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+ibus-daemon -drx
+
+xinput set-prop 'ELAN0670:00 04F3:3150 Touchpad' 'libinput Natural Scrolling Enabled' 1

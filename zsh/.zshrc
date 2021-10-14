@@ -203,7 +203,8 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
 esac
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # Autojump
  [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
@@ -211,21 +212,13 @@ esac
 # ASDF
 . $HOME/.asdf/asdf.sh
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-
 # GCloud
-export PROJECT_ID=$(gcloud config get-value project)
+# export PROJECT_ID=$(gcloud config get-value project)
 
 # GO
-export GOROOT=$HOME/.asdf/installs/golang/1.16.5/go
-export GOPATH=$HOME/.asdf/installs/golang/1.16.5/packages
-export PATH=$PATH:$GOPATH/bin
+# export GOROOT=$HOME/.asdf/installs/golang/1.16.8/go
+# export GOPATH=$HOME/.asdf/installs/golang/1.16.8/packages
+# export PATH=$PATH:$GOPATH/bin
 
 # Android
 export ANDROID_HOME=$HOME/Android/Sdk
