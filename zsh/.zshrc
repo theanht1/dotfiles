@@ -65,6 +65,9 @@ alias pbcopy="xclip -selection clipboard -i"
 # Short function for open file
 function open() { xdg-open "$@" & }
 
+#
+fpath+=~/.zfunc
+
 # Theming section
 autoload -U compinit colors zcalc
 compinit -d
@@ -202,15 +205,15 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
 esac
 
+# ASDF
+. $HOME/.asdf/asdf.sh
+
 # FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 # Autojump
  [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
-
-# ASDF
-. $HOME/.asdf/asdf.sh
 
 # GCloud
 # export PROJECT_ID=$(gcloud config get-value project)

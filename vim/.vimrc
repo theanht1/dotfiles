@@ -71,7 +71,7 @@ nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 
 " Copy to clipboard
-noremap <C-y> :w !xclip -selection clipboard -i<CR>
+vnoremap <C-y> "yy <Bar> :call system('xclip -selection clipboard -i', @y)<CR>
 
 
 " Save last session position
