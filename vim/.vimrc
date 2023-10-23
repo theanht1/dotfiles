@@ -24,6 +24,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'itchyny/calendar.vim'
 
 call plug#end()
 
@@ -221,3 +222,7 @@ let g:mkdp_port = 7373
 " fzf.vim bindings
 set rtp+=/usr/local/opt/fzf
 map <C-P> :FZF<CR>
+
+" Calendar
+let g:calendar_google_calendar = 1
+source ~/.cache/calendar.vim/credentials.vim

@@ -118,11 +118,22 @@ export TERM=xterm-256color
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 export FZF_DEFAULT_COMMAND='rg --files'
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 export SP_UNIX_SOCKET=/tmp/spex.sock
+
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+alias go_ut='go test -race $(go list ./... | egrep "internal|pkg" | egrep -v "generated_proto" | egrep -v "mock")'
+
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+# Colima
+export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
