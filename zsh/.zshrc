@@ -125,6 +125,7 @@ export FZF_DEFAULT_COMMAND='rg --files'
 # asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+# source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 export SP_UNIX_SOCKET=/tmp/spex.sock
 
@@ -132,8 +133,6 @@ export SP_UNIX_SOCKET=/tmp/spex.sock
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 alias go_ut='go test -race $(go list ./... | egrep "internal|pkg" | egrep -v "generated_proto" | egrep -v "mock")'
-
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Colima
 export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
