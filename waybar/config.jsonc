@@ -1,0 +1,39 @@
+{
+    "position": "bottom",
+    "modules-left": ["custom/menu", "sway/workspaces", "custom/scratchpad"],
+    "modules-center": ["custom/wf-recorder", "sway/mode", "custom/weather"],
+    "modules-right": [
+        // informational
+        // "sway/language",
+        "custom/github",
+        "custom/clipboard",
+        "custom/zeit",
+        "cpu",
+        "temperature",
+        "memory",
+        "battery",
+
+        // connecting
+        "network",
+        "bluetooth",
+        "custom/valent",
+
+        // media
+        "custom/playerctl",
+        "custom/idle_inhibitor",
+        "custom/dnd",
+        "pulseaudio",
+        "backlight",
+
+        // system
+        "custom/adaptive-light",
+        "custom/sunset",
+        "custom/pacman",
+
+        "tray",
+        "clock"
+    ],
+    "include": [
+        "/usr/share/sway/templates/waybar/config.jsonc"
+    ]
+}
