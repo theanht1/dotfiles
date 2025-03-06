@@ -24,7 +24,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'itchyny/calendar.vim'
+" Plug 'itchyny/calendar.vim'
 
 call plug#end()
 
@@ -224,5 +224,5 @@ set rtp+=/usr/local/opt/fzf
 map <C-P> :FZF<CR>
 
 " Calendar
-let g:calendar_google_calendar = 1
-source ~/.cache/calendar.vim/credentials.vim
+" let g:calendar_google_calendar = 1
+" source ~/.cache/calendar.vim/credentials.vim
